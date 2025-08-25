@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "631d8d48-302c-4b32-90a8-c9bafaf1e836",
+		"name": "Daily Diet API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "993803",
+		"_collection_link": "https://blue-zodiac-954273.postman.co/workspace/660f038d-fa97-4ba3-adb3-2cf3a4364392/collection/993803-631d8d48-302c-4b32-90a8-c9bafaf1e836?action=share&source=collection_link&creator=993803"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Carlos Eduardo Guerra Resende\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "meals",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Almoço\",\n  \"description\": \"Peito de frango com salada\",\n  \"meal_date\": \"2025-08-24T12:30:00\",\n  \"is_on_diet\": true,\n  \"user_id\": 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/meals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a meal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Almoço\",\n  \"description\": \"Peito de frango com salada\",\n  \"meal_date\": \"2025-08-24T12:30:00\",\n  \"is_on_diet\": true,\n  \"user_id\": 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/meals/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"meals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/meals/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"meals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all meals from user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/meals/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"meals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a meal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/meals/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"meals",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
